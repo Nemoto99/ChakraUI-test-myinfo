@@ -1,25 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import { Box, ChakraProvider, useColorMode } from '@chakra-ui/react';
+import ChakraCard from './components/ChakraCard';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <ChakraProvider>
+      <AppContent />
+    </ChakraProvider>
+  );
+};
+
+const AppContent = () => {
+  const { colorMode } = useColorMode();
+
+  return (
+    <div className='app'>
+      <Box bg={colorMode === 'light' ? '#f3f3f2' : '#2F3030'}>
+        <ChakraCard />
+      </Box>
     </div>
   );
-}
+};
 
 export default App;
