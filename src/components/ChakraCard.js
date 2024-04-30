@@ -63,7 +63,7 @@ const ChakraCard = () => {
                   fontSize='3xl'
                   mb={3}
                 >
-                  Shunichi Nemoto20
+                  Shunichi Nemoto
                 </Heading>
                 <Text
                   fontWeight='bold'
